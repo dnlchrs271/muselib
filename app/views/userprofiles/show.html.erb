@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recentlyplayedartists:</strong>
+  <%= @userprofile.recentlyplayedartists %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @userprofile.string %>
+</p>
+
+<p>
+  <strong>Followers:</strong>
+  <%= @userprofile.followers %>
+</p>
+
+<p>
+  <strong>Int:</strong>
+  <%= @userprofile.int %>
+</p>
+
+<p>
+  <strong>Playlists:</strong>
+  <%= @userprofile.playlists %>
+</p>
+
+<p>
+  <strong>Following:</strong>
+  <%= @userprofile.following %>
+</p>
+
+<p>
+  <strong>Int:</strong>
+  <%= @userprofile.int %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @userprofile.name %>
+</p>
+
+<p>
+  <strong>Follow:</strong>
+  <%= @userprofile.follow %>
+</p>
+
+<%= link_to 'Edit', edit_userprofile_path(@userprofile) %> |
+<%= link_to 'Back', userprofiles_path %>

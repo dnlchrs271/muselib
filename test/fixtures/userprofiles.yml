@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recentlyplayedartists: MyString
+  string: MyString
+  followers: MyString
+  int: MyString
+  playlists: 
+  following: MyString
+  int: MyString
+  name: MyString
+  follow: MyString
+
+two:
+  recentlyplayedartists: MyString
+  string: MyString
+  followers: MyString
+  int: MyString
+  playlists: 
+  following: MyString
+  int: MyString
+  name: MyString
+  follow: MyString
