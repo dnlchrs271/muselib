@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308021809) do
+ActiveRecord::Schema.define(version: 20160308022644) do
+
+  create_table "browsegenres", force: :cascade do |t|
+    t.string   "newreleases"
+    t.string   "string"
+    t.string   "category"
+    t.string   "search"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "currentsongs", force: :cascade do |t|
     t.string   "title"

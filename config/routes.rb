@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :browsegenres
   resources :currentsongs
   resources :playlists
   resources :posts
