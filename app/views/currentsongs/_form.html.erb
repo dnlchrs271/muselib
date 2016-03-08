@@ -1,0 +1,61 @@
+<%= form_for(@currentsong) do |f| %>
+  <% if @currentsong.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@currentsong.errors.count, "error") %> prohibited this currentsong from being saved:</h2>
+
+      <ul>
+      <% @currentsong.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :albumcover %><br>
+    <%= f.text_field :albumcover %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :songlength %><br>
+    <%= f.text_field :songlength %>
+  </div>
+  <div class="field">
+    <%= f.label :float %><br>
+    <%= f.text_field :float %>
+  </div>
+  <div class="field">
+    <%= f.label :shuffleplay %><br>
+    <%= f.text_field :shuffleplay %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :previousong %><br>
+    <%= f.text_field :previousong %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :forwardsong %><br>
+    <%= f.text_field :forwardsong %>
+  </div>
+  <div class="field">
+    <%= f.label :repeat %><br>
+    <%= f.text_field :repeat %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

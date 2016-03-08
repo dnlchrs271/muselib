@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  albumcover: MyString
+  string: MyString
+  songlength: MyString
+  float: MyString
+  shuffleplay: MyString
+  string: MyString
+  previousong: MyString
+  string: MyString
+  forwardsong: MyString
+  repeat: MyString
+
+two:
+  title: MyString
+  albumcover: MyString
+  string: MyString
+  songlength: MyString
+  float: MyString
+  shuffleplay: MyString
+  string: MyString
+  previousong: MyString
+  string: MyString
+  forwardsong: MyString
+  repeat: MyString

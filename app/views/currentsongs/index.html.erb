@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Currentsongs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Albumcover</th>
+      <th>String</th>
+      <th>Songlength</th>
+      <th>Float</th>
+      <th>Shuffleplay</th>
+      <th>String</th>
+      <th>Previousong</th>
+      <th>String</th>
+      <th>Forwardsong</th>
+      <th>Repeat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @currentsongs.each do |currentsong| %>
+      <tr>
+        <td><%= currentsong.title %></td>
+        <td><%= currentsong.albumcover %></td>
+        <td><%= currentsong.string %></td>
+        <td><%= currentsong.songlength %></td>
+        <td><%= currentsong.float %></td>
+        <td><%= currentsong.shuffleplay %></td>
+        <td><%= currentsong.string %></td>
+        <td><%= currentsong.previousong %></td>
+        <td><%= currentsong.string %></td>
+        <td><%= currentsong.forwardsong %></td>
+        <td><%= currentsong.repeat %></td>
+        <td><%= link_to 'Show', currentsong %></td>
+        <td><%= link_to 'Edit', edit_currentsong_path(currentsong) %></td>
+        <td><%= link_to 'Destroy', currentsong, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Currentsong', new_currentsong_path %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @currentsong.title %>
+</p>
+
+<p>
+  <strong>Albumcover:</strong>
+  <%= @currentsong.albumcover %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @currentsong.string %>
+</p>
+
+<p>
+  <strong>Songlength:</strong>
+  <%= @currentsong.songlength %>
+</p>
+
+<p>
+  <strong>Float:</strong>
+  <%= @currentsong.float %>
+</p>
+
+<p>
+  <strong>Shuffleplay:</strong>
+  <%= @currentsong.shuffleplay %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @currentsong.string %>
+</p>
+
+<p>
+  <strong>Previousong:</strong>
+  <%= @currentsong.previousong %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @currentsong.string %>
+</p>
+
+<p>
+  <strong>Forwardsong:</strong>
+  <%= @currentsong.forwardsong %>
+</p>
+
+<p>
+  <strong>Repeat:</strong>
+  <%= @currentsong.repeat %>
+</p>
+
+<%= link_to 'Edit', edit_currentsong_path(@currentsong) %> |
+<%= link_to 'Back', currentsongs_path %>

@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308020530) do
+ActiveRecord::Schema.define(version: 20160308021809) do
+
+  create_table "currentsongs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "albumcover"
+    t.string   "string"
+    t.string   "songlength"
+    t.string   "float"
+    t.string   "shuffleplay"
+    t.string   "previousong"
+    t.string   "forwardsong"
+    t.string   "repeat"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "playlists", force: :cascade do |t|
     t.string   "title"
