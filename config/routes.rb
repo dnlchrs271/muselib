@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :userprofiles
+  devise_for :users
+  ActiveAdmin.routes(self)
+ 
+  #setting a root route
+  root 'posts#index'
   resources :browsegenres
   resources :currentsongs
   resources :playlists
