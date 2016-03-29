@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318031708) do
+ActiveRecord::Schema.define(version: 20160329201737) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(version: 20160318031708) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "categorizations", force: :cascade do |t|
+    t.integer  "post_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "categorizations", ["post_id"], name: "index_categorizations_on_post_id"
+  add_index "categorizations", ["tag_id"], name: "index_categorizations_on_tag_id"
 
   create_table "currentsongs", force: :cascade do |t|
     t.string   "title"
@@ -72,6 +82,22 @@ ActiveRecord::Schema.define(version: 20160318031708) do
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+
+  create_table "song_labels", force: :cascade do |t|
+    t.string   "title",      default: "untitled", null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  add_index "song_labels", ["title"], name: "index_song_labels_on_title", unique: true
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "title",      default: "untitled", null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  add_index "tags", ["title"], name: "index_tags_on_title", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

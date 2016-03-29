@@ -1,5 +1,5 @@
-class Tag < ActiveRecord::Base
+class SongLabel < ActiveRecord::Base
     validates :title, presence: true, uniqueness: true
     has_many :categorizations
-    has_many :posts, through: :categorizations
+    has_many :playlists, through: :categorizations
 end

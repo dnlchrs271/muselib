@@ -1,6 +1,6 @@
-class CreateTags < ActiveRecord::Migration
+class CreateSongLabels < ActiveRecord::Migration
   def change
-    create_table :tags do |t|
+    create_table :song_labels do |t|
       t.string :title, null: false, default: 'untitled'
       t.index :title, unique: true
 

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :genrgenres
+  resources :song_labels
+  resources :tags
   resources :tags
   devise_for :users
   ActiveAdmin.routes(self)
