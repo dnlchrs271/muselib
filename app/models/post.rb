@@ -1,3 +1,5 @@
+#meta programming for base?
+#Active keyword means code comes from Rails
 class Post < ActiveRecord::Base
     belongs_to :user
     validates :user, presence: true

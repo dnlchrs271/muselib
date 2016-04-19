@@ -4,6 +4,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    #static method
+    #retrieves all the records of post that have been created
+    #getting it straight from the database
+    #all methods comes from ActiveRecord base
+    # @ sign is an instance variable, can be used in the views
     @posts = Post.all
   end
 
@@ -63,7 +68,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
+  # DELETE /posts/
   # DELETE /posts/1.json
   def destroy
     @post.destroy

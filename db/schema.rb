@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329201737) do
+ActiveRecord::Schema.define(version: 20160419213919) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -61,6 +61,12 @@ ActiveRecord::Schema.define(version: 20160329201737) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "genrgenres", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "playlists", force: :cascade do |t|
     t.string   "title"
     t.string   "artistname"
@@ -87,6 +93,8 @@ ActiveRecord::Schema.define(version: 20160329201737) do
     t.string   "title",      default: "untitled", null: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.string   "song_uid"
+    t.string   "song_name"
   end
 
   add_index "song_labels", ["title"], name: "index_song_labels_on_title", unique: true
