@@ -19,6 +19,15 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+  
+  <% form_for @song do |f| %>
+  
+  <%= f.file_field :audio %>
+  
+  <% end %>
+  params.require(:song).permit(:audio)
+  
+  <%= audio_tag @song.audio.thumb('400x200#').url if @song.image_stored? %>
   <div class="actions">
     <%= f.submit %>
   </div>
