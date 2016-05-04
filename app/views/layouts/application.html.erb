@@ -7,6 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="main-header">
+  <a href="#main-nav" class="open-menu">
+    ☰
+  </a>
+  <a href="#" class="close-menu">
+    ☰
+  </a>
+  <h1>MELLOW-D </h1>
+</header>
+  <nav class="main-nav" id="main-nav">
+  <a href="#">
+    <span class="icon entypo-search"></span>
+    Search
+  </a>
+  <a href="#">
+    <span class="icon entypo-folder"></span>
+    Browse
+  </a>
+  <a href="#">
+    <span class="icon entypo-note-beamed"></span>
+    Playlists
+  </a>
+
+  <a href="#">
+    <span class="icon entypo-user"></span>
+    Profile
+  </a>
+  
+</nav>
+
+
+
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <% if user_signed_in? %>

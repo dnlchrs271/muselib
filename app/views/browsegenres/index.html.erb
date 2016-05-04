@@ -18,12 +18,8 @@
   <tbody>
     <% @browsegenres.each do |browsegenre| %>
       <tr>
-        <td><%= browsegenre.newreleases %></td>
-        <td><%= browsegenre.string %></td>
-        <td><%= browsegenre.category %></td>
-        <td><%= browsegenre.string %></td>
-        <td><%= browsegenre.search %></td>
-        <td><%= browsegenre.string %></td>
+        <td><%= browsegenre.title %></td>
+   
         <td><%= link_to 'Show', browsegenre %></td>
         <td><%= link_to 'Edit', edit_browsegenre_path(browsegenre) %></td>
         <td><%= link_to 'Destroy', browsegenre, method: :delete, data: { confirm: 'Are you sure?' } %></td>

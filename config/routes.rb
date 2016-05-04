@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
-  resources :genrgenres
+  resources :genres
   resources :song_labels
-  resources :tags
   resources :tags
   devise_for :users
   ActiveAdmin.routes(self)
- 
-  #setting a root route
-  root 'posts#index'
-  resources :browsegenres
   resources :currentsongs
   resources :playlists
   resources :posts
+ 
+  #setting a root route
+  root 'genres#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

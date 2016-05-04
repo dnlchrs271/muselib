@@ -28,6 +28,7 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
 gem 'dragonfly', '~> 1.0.12'
+gem 'rack-cache', :require => 'rack/cache'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
