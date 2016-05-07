@@ -1,6 +1,6 @@
 class Playlist < ActiveRecord::Base
-    has_many :categorizations
-    has_many :currentsongs, through: :categorizations
-    has_many :song_labels, through: :categorizations
+  
+    #has_many :currentsongs
+    has_many :song_labels
     belongs_to :genres
 end

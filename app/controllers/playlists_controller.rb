@@ -3,8 +3,12 @@ class PlaylistsController < ApplicationController
 
   # GET /playlists
   # GET /playlists.json
+ 
   def index
     @playlists = Playlist.all
+  end
+
+  def focus
   end
 
   # GET /playlists/1

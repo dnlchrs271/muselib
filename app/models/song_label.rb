@@ -1,6 +1,6 @@
 class SongLabel < ActiveRecord::Base
     validates :title, presence: true, uniqueness: true
    
-    has_many :playlists
+    belongs_to :playlists
    dragonfly_accessor :song
 end
