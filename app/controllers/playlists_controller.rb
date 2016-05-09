@@ -9,7 +9,7 @@ class PlaylistsController < ApplicationController
   end
 
   def focus
-    @playlists = Playlist.all
+    @playlist = Genre.find(Genre::FOCUS_ID)
   end
 
   # GET /playlists/1

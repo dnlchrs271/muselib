@@ -20,8 +20,9 @@
     <%= f.text_field :title %>
   </div>
   
-  <% form_for @song do |f| %>
-  
+  <% if form_for @song do |f| %>
+  <%= f.file_field :title %>
+  <%= f.file_field :artistname %>
   <%= f.file_field :audio %>
   
   <% end %>

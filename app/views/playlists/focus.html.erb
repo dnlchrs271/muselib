@@ -6,9 +6,9 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @playlist.title %>
+<% if @playlists %>
+
+<% end %>
 </p>
+<%= link_to 'New Song label', new_song_label_path %>
 
-
-<%= link_to 'Edit', edit_playlist_path(@playlist) %> |
-<%= link_to 'Back', playlists_path %>

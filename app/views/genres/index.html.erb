@@ -15,16 +15,7 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @genres.each do |genre| %>
-      <tr>
-        <td><%= genre.title %></td>
-        <td><%= link_to 'Show', genre %></td>
-        <td><%= link_to 'Edit', edit_genre_path(genre) %></td>
-        <td><%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+
 </table>
 
 <br>
@@ -42,7 +33,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <%= link_to "Browse Focus Playlists", new_playlist_path %>
+      <%= link_to "Browse Focus Playlists", focus_path %>
       <img src="/assets/focus.jpg" style="margin-left: 500px;">
     </div>
     <div class="item">
