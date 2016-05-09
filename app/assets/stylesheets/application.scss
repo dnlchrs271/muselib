@@ -15,10 +15,11 @@
 }
 
 
-html, body { min-height: 100%; 
-  background-image: url('/assets/musicBack.jpg');
+html, body { min-height: 100%;
+    position: text-center;
+    background-image: url(/assets/musicBack.jpg);
 }
-a { text-decoration: none; }
+a {  }
 
 $main_nav_h: 65px;
 
@@ -31,7 +32,7 @@ $main_nav_h: 65px;
     color: white;
     font-size: 32px;
   }
-  h1 { font-size: 1em; font-weight: normal; color: white;}
+  h1 { font-size: 1em; font-weight: normal; }
 }
 
 .page-wrap {
@@ -39,9 +40,6 @@ $main_nav_h: 65px;
   transition: width 0.4s ease;
 }
 
-.listingGenres{
-text-align: center;
-}
 .main-nav {
   position: fixed; top: $main_nav_h; width: 0; height: 100%;
   background: #272727;
@@ -83,6 +81,5 @@ text-align: center;
      display: block;
   }
 }
-
 
   
