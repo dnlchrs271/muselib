@@ -1,11 +1,16 @@
 <p id="notice"><%= notice %></p>
 <div class = listingGenres>
-<h1>Listing genres</h1>
+<h1>Browse Genres</h1>
 
 <table>
   <thead>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <tr>
-      <th>Title</th>
+      <th>Home</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,7 +29,38 @@
 
 <br>
 
-<%= link_to "Focus", focus_path %>
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width: 100%">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= link_to "New", new_playlist_path %>
+      <img src="/assets/focus.jpg" style="margin-left: 400px;">
+    </div>
+    <div class="item">
+      <img src="/assets/relaxation.jpg" style="margin-left: 400px;">
+    </div>
+     <div class="item">
+      <img src="/assets/sleep.jpg" style="margin-left: 400px;">
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
 
 
 </div>

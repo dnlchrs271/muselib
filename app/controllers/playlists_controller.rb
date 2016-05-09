@@ -9,6 +9,7 @@ class PlaylistsController < ApplicationController
   end
 
   def focus
+    @playlists = Playlist.all
   end
 
   # GET /playlists/1
