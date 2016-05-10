@@ -1,11 +1,12 @@
 class PlaylistsController < ApplicationController
   before_action :set_playlist, only: [:show, :edit, :update, :destroy]
+  before_action :set_genre
 
   # GET /playlists
   # GET /playlists.json
  
   def index
-    @playlists = Playlist.all
+    @playlists = @genre.playlists
   end
 
   def focus
@@ -19,7 +20,7 @@ class PlaylistsController < ApplicationController
 
   # GET /playlists/new
   def new
-    @playlist = Playlist.new
+    @playlist = @genre.playlists.new
   end
 
   # GET /playlists/1/edit
@@ -29,7 +30,7 @@ class PlaylistsController < ApplicationController
   # POST /playlists
   # POST /playlists.json
   def create
-    @playlist = Playlist.new(playlist_params)
+    @playlist = @genre.playlists.new(playlist_params)
 
     respond_to do |format|
       if @playlist.save
@@ -70,6 +71,10 @@ class PlaylistsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_playlist
       @playlist = Playlist.find(params[:id])
+    end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_genre
+      @genre = Genre.find(params[:genre_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

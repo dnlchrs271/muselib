@@ -1,4 +1,4 @@
-<%= form_for(@playlist) do |f| %>
+<%= form_for [@genre, @playlist] do |f| %>
   <% if @playlist.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@playlist.errors.count, "error") %> prohibited this playlist from being saved:</h2>
@@ -19,11 +19,6 @@
   <div class="field">
     <%= f.label :artistname %><br>
     <%= f.text_field :artistname %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :audio %><br>
-    <%= f.text_field :audio %>
   </div>
  
   <div class="actions">

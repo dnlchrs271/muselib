@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  resources :genres
-  resources :song_labels
+  resources :genres, except: [:edit, :update] do
+    resources :playlists do
+      resources :song_labels
+    end
+  end
 
   devise_for :users
   ActiveAdmin.routes(self)
   resources :currentsongs
-  resources :playlists
  
  
   #setting a root route
@@ -21,8 +23,8 @@ Rails.application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-  get "/app/views/playlists/focus.html.erb", to: "playlists#focus", as: "focus"
-
+  # get "/app/views/playlists/focus.html.erb", to: "playlists#focus", as: "focus"
+  
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

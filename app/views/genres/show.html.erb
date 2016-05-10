@@ -5,5 +5,13 @@
   <%= @genre.title %>
 </p>
 
-<%= link_to 'Edit', edit_genre_path(@genre) %> |
+<% if @genre.playlists %>
+  <ul>
+  <% @genre.playlists.each do |playlist| %>
+    <li><%= link_to playlist.title, genre_playlist_path(genre_id: @genre.id, id:playlist.id) %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= link_to 'New Playlist',  new_genre_playlist_path(genre_id: @genre.id) %> |
 <%= link_to 'Back', genres_path %>

@@ -18,10 +18,7 @@ class GenresController < InheritedResources::Base
     @genre = Genre.new
   end
 
-  # GET /genres/1/edit
-  def edit
-  end
-
+  
   # POST /genres
   # POST /genres.json
   def create
@@ -38,19 +35,6 @@ class GenresController < InheritedResources::Base
     end
   end
 
-  # PATCH/PUT /genres/1
-  # PATCH/PUT /genres/1.json
-  def update
-    respond_to do |format|
-      if @genre.update(genre_params)
-        format.html { redirect_to @genre, notice: 'Genre was successfully updated.' }
-        format.json { render :show, status: :ok, location: @genre }
-      else
-        format.html { render :edit }
-        format.json { render json: @genre.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # DELETE /genres/1
   # DELETE /genres/1.json

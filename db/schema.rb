@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503214213) do
+ActiveRecord::Schema.define(version: 20160510213204) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 20160503214213) do
 
   create_table "genres", force: :cascade do |t|
     t.string   "title"
-    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,7 +74,10 @@ ActiveRecord::Schema.define(version: 20160503214213) do
     t.string   "shuffleplay"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "genre_id"
   end
+
+  add_index "playlists", ["genre_id"], name: "index_playlists_on_genre_id"
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -91,13 +93,15 @@ ActiveRecord::Schema.define(version: 20160503214213) do
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "song_labels", force: :cascade do |t|
-    t.string   "title",      default: "untitled", null: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.string   "title",       default: "untitled", null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "song_uid"
     t.string   "song_name"
+    t.integer  "playlist_id"
   end
 
+  add_index "song_labels", ["playlist_id"], name: "index_song_labels_on_playlist_id"
   add_index "song_labels", ["title"], name: "index_song_labels_on_title", unique: true
 
   create_table "tags", force: :cascade do |t|

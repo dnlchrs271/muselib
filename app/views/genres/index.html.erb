@@ -26,15 +26,15 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <%= link_to "Browse Focus Playlists", focus_path %>
+      <%= link_to "Browse Focus Playlists", genre_path(id: 1) %>
       <img src="/assets/focus.jpg" style="margin-left: 500px;">
     </div>
     <div class="item">
-       <%= link_to "Browse Relaxation Playlists", new_playlist_path %>
+       <%= link_to "Browse Relaxation Playlists", genre_path(id: 2)%>
       <img src="/assets/relaxation.jpg" style="margin-left: 500px;">
     </div>
      <div class="item">
-            <%= link_to "Browse Sleep Playlists", new_playlist_path %>
+            <%= link_to "Browse Sleep Playlists",  genre_path(id: 3) %>
       <img src="/assets/sleep.jpg" style="margin-left: 500px;">
     </div>
   </div>
