@@ -12,14 +12,18 @@
 /* entypo */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
+ 
 }
 
 
 html, body { min-height: 100%;
     text-align: center;
-    background-image: url(/assets/musicBack.jpg);
+    background-image: url(/assets/musicBack.jpg); 
+    font-size: 20px !important;
+    color: #fff !important;
+   
 }
-a {  }
+
 
 $main_nav_h: 65px;
 
