@@ -6,10 +6,6 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Artistname</th>
-      <th>String</th>
-      <th>Shuffleplay</th>
-      <th>String</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,7 +18,7 @@
         <td><%= playlist.string %></td>
         <td><%= playlist.shuffleplay %></td>
         <td><%= playlist.string %></td>
-        <td><%= link_to 'Show', genre_path(id: 1) %></td>
+        <td><%= link_to 'Show', genre_playlist_path(genre_id: @genre_id, id: playlist.id) %></td>
         <td><%= link_to 'Edit',   edit_genre_playlist_path(genre_id: @genre.id, id: playlist.id) %></td>
         <td><%= link_to 'Destroy', genre_playlist_path(genre_id: @genre.id, id: playlist.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
