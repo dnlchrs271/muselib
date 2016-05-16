@@ -5,6 +5,15 @@
   <%= @playlist.title %>
 </p>
 
+<% if @playlist.song_labels %>
+  <ul>
+  <% @playlist.song_labels.each do |song_label| %>
+    <li><%= link_to song_label.title, genre_playlist_path(genre_id: @genre.id, id: @playlist.id) %></li>
+  <% end %>
+  </ul>
+<% end %>
+
 
 <%= link_to 'Edit', edit_genre_playlist_path %> |
-<%= link_to 'Back', genre_playlists_path(genre_id: @genre.id) %>
+<%= link_to 'Back', genre_playlists_path(genre_id: @genre.id) %> |
+<%= link_to 'New Song',  new_genre_playlist_song_label_path(genre_id: @genre.id, playlist_id: @playlist.id) %> |

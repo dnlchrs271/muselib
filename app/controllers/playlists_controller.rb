@@ -34,7 +34,7 @@ class PlaylistsController < ApplicationController
 
     respond_to do |format|
       if @playlist.save
-        format.html { redirect_to @playlist, notice: 'Playlist was successfully created.' }
+        format.html { redirect_to genre_playlist_path(genre_id: @genre.id, id: @playlist.id), notice: 'Playlist was successfully created.' }
         format.json { render :show, status: :created, location: @playlist }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class PlaylistsController < ApplicationController
   def update
     respond_to do |format|
       if @playlist.update(playlist_params)
-        format.html { redirect_to @playlist, notice: 'Playlist was successfully updated.' }
+        format.html { redirect_to genre_playlist_path(genre_id: @genre.id, id: @playlist.id), notice: 'Playlist was successfully updated.' }
         format.json { render :show, status: :ok, location: @playlist }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class PlaylistsController < ApplicationController
   def destroy
     @playlist.destroy
     respond_to do |format|
-      format.html { redirect_to playlists_url, notice: 'Playlist was successfully destroyed.' }
+      format.html { redirect_to genre_playlist_path(genre_id: @genre.id, id: @playlist.id), notice: 'Playlist was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -79,6 +79,8 @@ class PlaylistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def playlist_params
-      params.require(:playlist).permit(:title, :artistname, :string, :shuffleplay, :string)
+      params.require(:playlist).permit(:title, :artistname)
     end
+    
+   
 end

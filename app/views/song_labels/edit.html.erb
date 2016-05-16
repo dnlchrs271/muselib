@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @song_label %> |
-<%= link_to 'Back', song_labels_path %>
+<%= link_to 'Show', genre_playlist_song_label_path(genre_id: @genre.id, playlist_id: @playlist.id, id: @song_label.id) %> |
+<%= link_to 'Back', genre_playlist_path(genre_id: @genre.id, id: @playlist.id) %>

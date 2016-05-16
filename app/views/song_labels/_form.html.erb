@@ -1,4 +1,4 @@
-<%= form_for(@song_label) do |f| %>
+<%= form_for [@genre, @playlist, @song_label] do |f| %>
 
   <% if @song_label.errors.any? %>
     <div id="error_explanation">
