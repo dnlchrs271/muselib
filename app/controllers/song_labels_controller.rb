@@ -5,6 +5,9 @@ class SongLabelsController < InheritedResources::Base
   
   # GET /playlists
   # GET /playlists.json
+  
+  
+   
  
   def index
     @song_labels = @playlist.song_labels

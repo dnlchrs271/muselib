@@ -5,5 +5,7 @@
   <%= @song_label.title %>
 </p>
 
+
+
 <%= link_to 'Edit', edit_genre_playlist_song_label_path(genre_id: @genre.id, playlist_id: @playlist.id, id: @song_label.id) %> |
-<%= link_to 'Back', genre_playlist_song_label_path(genre_id: @genre.id, playlist_id: @playlist.id, id: @song_label.id) %>
+<%= link_to 'Back', genre_playlist_path(genre_id: @genre.id, id: @playlist.id) %>

@@ -20,7 +20,7 @@
         <td><%= playlist.string %></td>
         <td><%= link_to 'Show', genre_path(id: @genre.id) %></td>
         <td><%= link_to 'Edit',   edit_genre_playlist_path(id: @genre.id) %></td>
-        <td><%= link_to 'Destroy', genre_path(id: @genre.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', genre_playlist_path(id: @genre.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
